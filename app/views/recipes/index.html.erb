@@ -1,0 +1,9 @@
+<h1>Here is a list of all your recipes by name:</h1>
+
+<ul>
+  
+  <% @recipes.each do |recipe| %>
+    <li><%= recipe.name %></li>
+  <% end %>
+  
+</ul>
