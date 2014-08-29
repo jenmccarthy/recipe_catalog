@@ -10,5 +10,15 @@ class RecipesController < ApplicationController
     render("recipes/new.html.erb")
   end
   
+  def create
+    @recipe = Recipe.create(params[:recipe])
+    if @recipe.valid?
+      flash[:notice] = "This recipe has been saved to your catalog"
+      redirect_to("/recipes")
+    else
+      render("recipes/new/html.erb")
+    end
+  end
+  
  
 end

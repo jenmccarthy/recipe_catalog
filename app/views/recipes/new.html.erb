@@ -1,5 +1,7 @@
 <h1> Please enter the new recipe information:</h1>
 
+<%= render('layouts/errors', :object => @recipe) %>
+
 <form action="/recipes" method="post">
   <%= render('form') %>
   <button>Save Recipe</button>
