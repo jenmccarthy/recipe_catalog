@@ -34,5 +34,12 @@ class TagsController < ApplicationController
       render("tags/edit.html.erb")
     end
   end
+  
+  def delete
+    @tag = Tag.find(params[:id])
+    @tag.destroy
+    flash[:notice] = "This tag has been deleted"
+    redirect_to("/tags")
+  end
 
 end
