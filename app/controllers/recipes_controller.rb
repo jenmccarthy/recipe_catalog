@@ -34,5 +34,12 @@ class RecipesController < ApplicationController
       render("recipes/edit.html.erb")
     end
   end
+  
+  def delete
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    flash[:notice] = "This recipe has been deleted from your catalog"
+    redirect_to("/recipes")
+  end
  
 end
