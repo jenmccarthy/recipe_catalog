@@ -2,7 +2,7 @@
 
 <ul>
   <% @tags.each do |tag| %>
-    <li><%= tag.name %></li>
+    <li><%= tag.name %>  |  <a href="/tags/<%= tag.id %>/edit">Edit</a>  |  <a href="/tags/<%= tag.id %>" data-method="delete" rel="nofollow">Delete</a></li>
   <% end %>
 </ul>
 
