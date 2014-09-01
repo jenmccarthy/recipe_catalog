@@ -41,5 +41,11 @@ class TagsController < ApplicationController
     flash[:notice] = "This tag has been deleted"
     redirect_to("/tags")
   end
+  
+  def show
+    @tag = Tag.find(params[:id])
+    @recipes = @tag.recipes
+    render("tags/show.html.erb")
+  end
 
 end
