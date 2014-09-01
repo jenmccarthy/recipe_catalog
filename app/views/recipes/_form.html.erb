@@ -2,3 +2,9 @@
 <input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>">
 <label for="recipe_instructions">Instructions (including ingredients)</label>
 <input id="recipe_instructions" name="recipe[instructions]" type="text" value="<%= @recipe.instructions %>">
+<label for='type'>Tag</label>
+    <select name='recipe[tag_id]' id="tag">
+      <% Tag.all.each do |tag| %>
+        <option value="<%= tag.id %>"><%= tag.name %></option>
+      <% end %>
+    </select>
