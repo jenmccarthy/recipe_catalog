@@ -4,4 +4,5 @@ class Recipe < ActiveRecord::Base
   validates :instructions, presence: :true
   
   belongs_to :tag
+  
 end
