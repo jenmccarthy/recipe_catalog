@@ -3,7 +3,7 @@
 <ul>
   
   <% @recipes.each do |recipe| %>
-  <li><%= recipe.name %>  |  <a href="/recipes/<%= recipe.id %>/edit">Edit</a>  |  <a href="/recipes/<%= recipe.id %>" data-method="delete" rel="nofollow">Delete</a></li>
+  <li><a href="/recipes/<%= recipe.id %>"><%= recipe.name %></a>  |  <a href="/recipes/<%= recipe.id %>/edit">Edit</a>  |  <a href="/recipes/<%= recipe.id %>" data-method="delete" rel="nofollow">Delete</a></li>
   <% end %>
   
 </ul>

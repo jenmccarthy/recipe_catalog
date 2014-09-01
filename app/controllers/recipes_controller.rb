@@ -41,5 +41,11 @@ class RecipesController < ApplicationController
     flash[:notice] = "This recipe has been deleted from your catalog"
     redirect_to("/recipes")
   end
+  
+  def show
+    @recipe = Recipe.find(params[:id])
+    render("recipes/show.html.erb")
+  end
+
  
 end
